@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tv_title">15dp</dimen>
+    <dimen name="tv_descreption">15dp</dimen>
+    <dimen name="iv_top_margin">130dp</dimen>
+</resources>

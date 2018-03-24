@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/welcome3"
+    >
+
+    <ImageView
+        android:id="@+id/iv_sl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/iv_top_margin"
+        android:src="@drawable/fav" />
+
+    <TextView
+        android:id="@+id/tv_title1"
+        android:layout_below="@id/iv_sl1"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/tv_title"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:text="Explore The whole World"
+        android:textColor="@color/color_white"
+        android:textSize="30sp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/tv_des1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title1"
+        android:text="Your Nearby places is just one click away."
+        style="@style/body"
+        android:textColor="@color/color_white"
+        android:layout_marginStart="@dimen/tv_descreption"/>
+</RelativeLayout>

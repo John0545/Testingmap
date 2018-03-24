@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/welcome2"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_wel_sl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_des2"
+android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/dir2" />
+
+    <TextView
+        android:id="@+id/tv_title2"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:layout_marginTop="355dp"
+        android:layout_marginStart="@dimen/tv_title"
+        android:text="Get Directions" />
+    <TextView
+        android:id="@+id/tv_des2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/body"
+        android:layout_below="@id/tv_title2"
+        android:layout_marginStart="@dimen/tv_descreption"
+        android:text="Find Directions to your Favourite Places."/>
+</RelativeLayout>

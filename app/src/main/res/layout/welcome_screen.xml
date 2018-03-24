@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/holo_orange_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.v4.view.ViewPager
+    android:id="@+id/mview_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</android.support.v4.view.ViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_white"
+        android:layout_above="@id/btn_Done"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:textColor="@color/color_white"
+        android:text="@string/btn_skip"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+    <LinearLayout
+        android:id="@+id/ll_dot"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+       android:layout_alignParentBottom="true">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/color_white"
+        android:text="@string/btn_done"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_right_black_24dp"
+        android:background="@null"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+       android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="onClick"
+        />
+</RelativeLayout>

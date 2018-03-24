@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Colors For Welcome Slide -->
+    <color name="welcome1">#11be28</color>
+    <color name="welcome2"> #CDDC39</color>
+
+    <color name="welcome3">#01579B </color>
+
+
+    <color name="color_black">#000 </color>
+
+
+
+    <color name="simple_blue_color"> #3F51B5</color>
+   
+    <color name="color_white"> #fff</color>
+
+
+
+</resources>

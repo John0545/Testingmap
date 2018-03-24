@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Testing map</string>
+    <string name="btn_map">open map</string>
+    <string name="service_not_Avaliable">Service Not Available</string>
+    <string name="Invalid_Lat_Long_used">Invalid Lat Long Used</string>
+    <string name="No_Address_Found">No Address Found</string>
+    <string name="Search">Enter Address, City or ZipCode</string>
+    <string name="welcome1">Find yours way</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_done">Done</string>
+</resources>
