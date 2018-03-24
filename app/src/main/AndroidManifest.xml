@@ -14,10 +14,12 @@
         android:supportsRtl="true"
       android:theme="@style/AppTheme" >
         <activity android:name=".MainActivity"
-            android:windowSoftInputMode="adjustPan|adjustResize">
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:clearTaskOnLaunch="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
 
             </intent-filter>
         </activity>

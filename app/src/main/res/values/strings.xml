@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Testing map</string>
+    <string name="app_name">Navigator</string>
     <string name="btn_map">open map</string>
     <string name="service_not_Avaliable">Service Not Available</string>
     <string name="Invalid_Lat_Long_used">Invalid Lat Long Used</string>

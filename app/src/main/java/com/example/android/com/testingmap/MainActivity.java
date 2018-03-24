@@ -181,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         List<Address> addressList = new ArrayList<>();
         try {
+
             addressList = geocoder.getFromLocationName(searchString,1);
         } catch (IOException e) {
             Log.e(TAG,"IOException Occurs"+e.getMessage());
@@ -301,7 +302,10 @@ public class MainActivity extends AppCompatActivity {
                 public void onMapReady(GoogleMap googleMap) {
                     mgoogleMap = googleMap;
                     mgoogleMap.getUiSettings().setMapToolbarEnabled(false);
+
+                    mgoogleMap.getUiSettings().setCompassEnabled(true);
                     init();
+
                     Toast.makeText(MainActivity.this, "Map is Ready", Toast.LENGTH_SHORT).show();
 
                 }
@@ -314,6 +318,7 @@ public class MainActivity extends AppCompatActivity {
 
 //    Adding Marker to Map
     private void AddMarker(LatLng latLng,String title){
+       mgoogleMap.clear();
         MarkerOptions options = new MarkerOptions().position(latLng).title(title).icon(BitmapDescriptorFactory.fromResource(R.mipmap.black_map_pin));
         options.draggable(true);
         if (!title.equals("My Location"))

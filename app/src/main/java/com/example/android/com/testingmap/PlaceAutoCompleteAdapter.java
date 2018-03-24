@@ -132,7 +132,7 @@ private ArrayList<AutocompletePrediction> mresults = new ArrayList<>();
         Log.e(TAG,"starting Autocomplete query for "+constraints);
         Task<AutocompletePredictionBufferResponse> results =
         mgeoDataClient.getAutocompletePredictions(constraints.toString(),mlatLngBounds,mautocompleteFilter);
-
+        AutocompletePredictionBufferResponse bufferResponse=null;
         try {
             Tasks.await(results,60, TimeUnit.SECONDS);
         } catch (ExecutionException e) {
@@ -145,12 +145,10 @@ private ArrayList<AutocompletePrediction> mresults = new ArrayList<>();
 
         try{
 
-            AutocompletePredictionBufferResponse bufferResponse = results.getResult();
+            bufferResponse = results.getResult();
             Log.e(TAG,"Querry Completed. Received "+bufferResponse.getCount()+" predictions.");
 
-            ArrayList <AutocompletePrediction> lid = DataBufferUtils.freezeAndClose(bufferResponse);
-            bufferResponse.release();
-            return lid;
+            return DataBufferUtils.freezeAndClose(bufferResponse);
         }catch (RuntimeException e){
             Log.e(TAG,"Error Connecting API : "+e.toString());
             Toast.makeText(getContext(), "Error Connecting API", Toast.LENGTH_SHORT).show();

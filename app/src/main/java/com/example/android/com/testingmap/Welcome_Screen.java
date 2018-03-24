@@ -35,13 +35,7 @@ public class Welcome_Screen extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.welcome_screen);
-        viewPager = findViewById(R.id.mview_pager);
-        dot = findViewById(R.id.ll_dot);
-        skip = findViewById(R.id.btn_skip);
-        done = findViewById(R.id.btn_Done);
-        next = findViewById(R.id.btn_next);
-         mpreference = PreferenceManager.getDefaultSharedPreferences(this);
+        mpreference = PreferenceManager.getDefaultSharedPreferences(this);
         if (!mpreference.contains(LAUNCH_TEST)){
             Log.e("TAG","not Contains");
             mpreference.edit().putBoolean(LAUNCH_TEST,true).apply();
@@ -49,8 +43,15 @@ public class Welcome_Screen extends AppCompatActivity {
 
         else if (!mpreference.getBoolean(LAUNCH_TEST,false))
         {
-           startActivity(new Intent(this,MainActivity.class));
+            launchHomeScreen();
         }
+        setContentView(R.layout.welcome_screen);
+        viewPager = findViewById(R.id.mview_pager);
+        dot = findViewById(R.id.ll_dot);
+        skip = findViewById(R.id.btn_skip);
+        done = findViewById(R.id.btn_Done);
+        next = findViewById(R.id.btn_next);
+
         mpreference.edit().putBoolean("LaunchTest",false).apply();
 
 
@@ -126,6 +127,7 @@ public void onClick(View view) {
 private void launchHomeScreen(){
 mpreference.edit().putBoolean(LAUNCH_TEST,false).apply();
     startActivity(new Intent(this,MainActivity.class));
+    finish();
 
 }
 }
